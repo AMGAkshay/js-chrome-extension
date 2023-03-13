@@ -9,7 +9,15 @@
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/*"],
-      "js": ["content.js"]
+      "css": ["scrollbars.css"],
+
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/filter-btn.svg"],
+      "matches": ["https://mail.google.com/*"]
     }
   ],
   "background": {
