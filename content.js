@@ -58,9 +58,9 @@ $(document).ready(function () {
     var popupElement = document.createElement("div");
     popupElement.className = "J-M aX0 aYO newPopup";
     popupElement.setAttribute("tabindex", "0");
-    popupElement.style.marginTop = "9%";
-    popupElement.style.marginLeft = "36%";
-    popupElement.style.width = "37%";
+    // popupElement.style.marginTop = "9%";
+    // popupElement.style.marginLeft = "36%";
+    // popupElement.style.width = "37%";
 
     popupElement.role = "menu";
     popupElement.ariaHasPopup = "true";
