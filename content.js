@@ -152,7 +152,7 @@ $(document).ready(function () {
     toolbarSection.appendChild(wrapper);
 
     addListenerToList();
-    setInterval(addListenerToList, 5000);
+    setInterval(addListenerToList, 1000);
   }
 
   function executeAction() {
@@ -168,7 +168,7 @@ $(document).ready(function () {
   setTimeout(executeAction, 1000);
 
   function addListenerToList() {
-    // console.log("emails listener check annd add");
+    console.log("emails listener check annd add");
 
     let emailList = document.getElementsByTagName("tbody");
     emailList = emailList[emailList.length - 1];
