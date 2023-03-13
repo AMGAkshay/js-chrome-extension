@@ -20,14 +20,10 @@ $(document).ready(function () {
     container.classList.remove("T-I-JW");
   });
   container.addEventListener("click", () => {
-    console.log("hello world from button", selectedRowEmail);
-    // console.log(selectedRowEmail.length);
-    // let str = selectedRowEmail.join(",");
     let liHtml = "";
     selectedRowEmail.map((mails) => {
       liHtml += `<li>${mails}</li>`;
     });
-    console.log(liHtml);
     var htmlfile = `
     <div id="myModal" class="modal">
 
@@ -91,7 +87,6 @@ $(document).ready(function () {
         popupElement.style.display = "none";
         modal.style.display = "none";
       }, 2000);
-      console.log("after timeout");
       var alertPopup = document.getElementsByClassName("vh")[0];
       alertPopup.style.background = "green";
       alertPopup.innerHTML = `<span class="aT"><span class="bAq">Messages from emails are deleted permenently!</span><span class="bAo">&nbsp;<span class="ag a8k" tabindex="0" role="alert" id="link_undo" param="#thread-a:r-4302120075518949594" idlink="" style="visibility:hidden" aria-live="assertive">Undo</span></span></span><div tabindex="0" role="button" class="bBe"><div class="bBf"></div></div>`;
@@ -102,7 +97,6 @@ $(document).ready(function () {
         alertpopupParent.classList.remove("bAp");
         Object.assign(alertpopupParent.style, { position: "relative" });
       }, 5000);
-      console.log("submit button called ");
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -152,7 +146,7 @@ $(document).ready(function () {
   Object.assign(popup.style, popupStyle);
 
   function actions() {
-    console.log("started settimeout function");
+    // console.log("started settimeout function");
 
     const toolbarSection = document.getElementsByClassName("G-tF")[0];
     toolbarSection.appendChild(wrapper);
@@ -174,7 +168,7 @@ $(document).ready(function () {
   setTimeout(executeAction, 1000);
 
   function addListenerToList() {
-    console.log("emails listener check annd add");
+    // console.log("emails listener check annd add");
 
     let emailList = document.getElementsByTagName("tbody");
     emailList = emailList[emailList.length - 1];
@@ -186,7 +180,6 @@ $(document).ready(function () {
         element.setAttribute("listener", "true");
         // oZ-jc T-Jo J-J5-Ji
         element.addEventListener("click", (event) => {
-          console.log("hello world from checkbox");
           setTimeout(() => {
             getSelectedEmailList(emailList);
           }, 0);
